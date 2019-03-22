@@ -20,13 +20,13 @@ function ProductList() {
 
   function DeleteProduct(id = '') {
     Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      title: '¿Estás seguro de eliminar esto?',
+      text: "No lo podrás revertir!",
       type: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!',
+      confirmButtonText: 'Eliminar!',
     }).then(async result => {
       if (result.value) {
         await Product_Delete(id);

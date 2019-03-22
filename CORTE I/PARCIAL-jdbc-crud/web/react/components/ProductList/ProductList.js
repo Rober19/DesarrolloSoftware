@@ -93,9 +93,9 @@ function ProductList() {
           <thead>
             <tr>
               <th>Id</th>
-              <th>Name</th>
-              <th>Image</th>
-              <th>Price</th>
+              <th>Nombre</th>
+              <th>Imagen</th>
+              <th>Precio</th>
               <th>-</th>
               <th>-</th>
             </tr>
@@ -117,7 +117,7 @@ function ProductList() {
                       DeleteProduct(product.Id);
                     }}
                   >
-                    Delete
+                    Eliminar
                   </button>
                 </td>
                 <td>
@@ -128,7 +128,7 @@ function ProductList() {
                     }}
                     class="btn btn-secondary btn-sm"
                   >
-                    Update
+                    Editar
                   </button>
                 </td>
               </tr>

@@ -2,24 +2,50 @@ const { Component } = React;
 const { Redirect } = ReactRouterDOM;
 
 function ProductCreate() {
+
+
   async function AddProduct(e) {
     e.preventDefault();
-    const { name, lastname, email, programming_language, vehicle3 } = e.target;
+    const {
+      name,
+      lastname,
+      email,
+      programming_language,
+      play,
+      eat,
+      playbike,
+      run,
+      work
+    } = e.target;
+    let arr1 = [
+      {status: play.checked, value: 'JUGAR🎮'},
+      {status: eat.checked, value: 'COMER🍲'},
+      {status: programming.checked, value: 'PROGRAMAR💻'},
+      {status: playbike.checked, value: 'MONTAR BICICLETA🚴'},
+      {status: run.checked, value: 'CORRER🏃'},
+      {status: work.checked, value: 'TRABAJAR🔨'},        
+    ]
+    let hobbs = [];
+
+    arr1.forEach((item) => {
+      if (item.status) hobbs.push(item.value)
+    })
 
     const person = {
       name: name.value,
       lastname: lastname.value,
       email: email.value,
       programming_language: programming_language.value,
-      vehicle3: vehicle3.value
+      hobbies: hobbs
       // programming_language: programming_language.value,
       // hobbies: hobbies.value      
     };
 
     console.log(person)
-    return null;
+    
     try {
-      let res = await http_post('/jsp-servlets-react/product', product);
+      let res = await http_post('/jsp-servlets-react/product', person);
+      console.warn(res)
       //alert("OK");
       document.getElementById('return').click();
     } catch (err) {
@@ -36,7 +62,7 @@ function ProductCreate() {
 
   return (
     <div className="container mt-5">
-      <h2>Crear Producto</h2>
+      <h2>Formulario Persona</h2>
       <form className="form-group" method="POST" id="myform" name="contactForm" onSubmit={event => AddProduct(event)}>
         <p className="fs-13">
           Nombre
@@ -64,18 +90,21 @@ function ProductCreate() {
           </select>
         </p>
         <p>
-          <input type="checkbox" id="vehicle1" name="vehicle1"  /> I have a bike<br/><br/>
-          <input type="checkbox" id="vehicle2" name="vehicle2" /> I have a car<br/>
-          <input type="checkbox" id="vehicle3" name="vehicle3" /> I have a boat<br/>
+          <input type="checkbox" id="play" name="play" /> JUGAR<br />
+          <input type="checkbox" id="eat" name="eat" /> COMER<br />
+          <input type="checkbox" id="programming" name="programming" /> PROGRAMAR<br />
+          <input type="checkbox" id="run" name="run" /> CORRER<br />
+          <input type="checkbox" id="work" name="work" /> TRABAJAR<br />
+          <input type="checkbox" id="playbike" name="playbike" /> MOTAR BICICLETA<br />
         </p>
 
 
-        <input type="submit" className="send-btn btn btn-primary" value="Send" />
+        <input type="submit" className="send-btn btn btn-primary" value="Enviar" />
       </form>
 
       <br />
       <Link id="return" to="/">
-        Regresar al listado de productos
+        Regresar al listado de personas
       </Link>
     </div>
   );

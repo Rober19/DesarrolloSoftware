@@ -98,7 +98,7 @@ public class PersonaController {
             String TblParams = "name, lastname, email, programming_language, hobbies ";
             ps = connection
                     .prepareStatement("insert into "
-                            + "jsp_react_project.products(" + TblParams + ")"
+                            + "persona(" + TblParams + ")"
                             + " values "
                             + "(" + DaoUtil.Fields_Query(TblParams) + ");"
                     );
@@ -106,12 +106,12 @@ public class PersonaController {
             ps.setString(1, person.getName());
             ps.setString(2, person.getLastname());
             ps.setString(3, person.getEmail());
-            ps.setString(3, person.getProgramming_language());
+            ps.setString(4, person.getProgramming_language());
             String listHobbies = "";
             for (String item : person.getHobbies()) {
                 listHobbies += item + ";";
             }
-            ps.setString(3, listHobbies);
+            ps.setString(5, listHobbies);
 
             ps.executeUpdate();
 

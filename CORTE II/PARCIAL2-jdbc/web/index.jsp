@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="icon" type="image/png" href="https://static.thenounproject.com/png/544325-200.png"/>
-    <% String title = "CRUD de Productos usando React.js + JEE (JSP/Servlets)";%>
+    <% String title = "Parcial 2";%>
     <title><%=title%></title>
     <link rel="stylesheet" href="libraries/bootstrap4.3.1.min.css" />
   </head>

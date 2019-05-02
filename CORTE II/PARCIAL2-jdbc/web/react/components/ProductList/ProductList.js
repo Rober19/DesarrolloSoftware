@@ -88,7 +88,7 @@ function ProductList() {
         </form>
       </nav>
       <div className="container">
-        <h2 className="text-center mt-5">Listado de Productos</h2>
+        <h2 className="text-center mt-5">Listado de Personas</h2>
         <table className="table table-striped mt-3">
           <thead>
             <tr>
@@ -109,9 +109,7 @@ function ProductList() {
                 <td>{product.lastname}</td>
                 <td>{product.email}</td>
                 <td>{product.programming_language}</td>
-                <td>💻💻</td>
-
-
+                <td>{product.hobbies}</td>
 
 
               </tr>

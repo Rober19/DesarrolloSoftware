@@ -37,6 +37,12 @@ public class ProductController {
     public void UpdateProduct(Product product){
         updateMySQL(product);
     }
+    
+     public ArrayList<Product> GetProducts() {
+        ArrayList<Product> products = new ArrayList<>();
+        GetMySQL(products);
+        return products;
+    }
 
     protected void postMySQL(Product product) {
         try {
@@ -158,10 +164,6 @@ public class ProductController {
 
     }
 
-    public ArrayList<Product> GetProducts() {
-        ArrayList<Product> products = new ArrayList<>();
-        GetMySQL(products);
-        return products;
-    }
+   
 
 }

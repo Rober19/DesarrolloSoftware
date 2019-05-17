@@ -50,7 +50,7 @@ function ProductCreate() {
           <input type="number" className="input-txt form-control" name="Price" id="Price" required/>
         </p>
 
-        <input type="submit" className="send-btn btn btn-primary" value="Send" />
+        <input type="submit" className="send-btn btn btn-primary" value="Enviar" />
       </form>
 
       <br />

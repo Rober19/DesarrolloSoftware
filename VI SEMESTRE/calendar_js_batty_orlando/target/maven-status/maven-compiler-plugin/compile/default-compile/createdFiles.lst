@@ -1,0 +1,16 @@
+pl\orlando\model\User.class
+pl\orlando\view\exceptionhandlers\BindingInterfaceWeb.class
+pl\orlando\facade\UserFacade.class
+pl\orlando\model\Event_.class
+pl\orlando\facade\EventFacade.class
+pl\orlando\view\controler\calendar_controller.class
+pl\orlando\view\bean\ScheduleView.class
+pl\orlando\facade\AbstractFacade.class
+pl\orlando\model\Event.class
+pl\orlando\view\exceptionhandlers\InterceptorForWeb.class
+pl\orlando\backend\exceptionsandhandlers\ExceptionAndLoggingInterceptorForFACADE.class
+pl\orlando\model\AbstractEntity_.class
+pl\orlando\model\AbstractEntity.class
+pl\orlando\model\User_.class
+pl\orlando\dto\EventDto.class
+pl\orlando\backend\exceptionsandhandlers\BasicApplicationException.class
